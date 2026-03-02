@@ -27,7 +27,7 @@ What starts as a simple script to print text to the console evolves across **8 d
 
 When executed, the program dynamically generates a 7-line high ASCII art banner of the target word (`OOPS`):
 
-```text
+
   **** **** ****** ***** * * * * * * * * * * * * * * * * * * ****** **** * * * * * * * * * * * * **** **** * ***** ```
 
 ---
