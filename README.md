@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎨 OOPS Banner App 🚀
+# 🎨 OOPs Banner App 🚀
 
 **A progressive Java console application rendering text as multi-line ASCII art.**
 
