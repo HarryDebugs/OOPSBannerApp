@@ -1,27 +1,39 @@
 /**
- * OOPSBannerApp UC5 - Render OOPS as Banner using Inline Array Initialization
- * This use case extends UC4 by defining and populating the String array in a more
- * concise way at the time of declaration using String.join().
+ * OOPSBannerApp UC6 - Refactor Banner Logic into Functions
  * @author Harry Jay William
- * @version 5.0
+ * @version 6.0
  */
 public class OOPSBannerApp {
-    public static void main(String[] args) {
-        
-        // Define and populate the String array at the time of declaration
-        String[] lines = {
-            String.join("", "  **** ", " **** ", " ****** ", " **** "),
-            String.join("", " * *", " * *", " * * ", " * *"),
-            String.join("", " * *", " * *", " * * ", " * *"),
-            String.join("", " * *", " **** ", " ****** ", " **** "),
-            String.join("", " * *", " * *", " * ", "      *"),
-            String.join("", " * *", " * *", " * ", " * *"),
-            String.join("", "  **** ", " **** ", " * ", "  **** ")
+
+    // Helper method for 'O'
+    public static String[] getOPattern() {
+        return new String[] {
+            "  **** ", " * *", " * *", " * *", " * *", " * *", "  **** "
         };
-        
-        // Use an enhanced for-each loop to print each line
-        for (String line : lines) {
-            System.out.println(line);
+    }
+
+    // Helper method for 'P'
+    public static String[] getPPattern() {
+        return new String[] {
+            " **** ", " * * ", " * * ", " **** ", " * ", " * ", " * "
+        };
+    }
+
+    // Helper method for 'S'
+    public static String[] getSPattern() {
+        return new String[] {
+            "  **** ", " * ", " * ", "  **** ", "      *", "      *", " **** "
+        };
+    }
+
+    public static void main(String[] args) {
+        String[] oPattern = getOPattern();
+        String[] pPattern = getPPattern();
+        String[] sPattern = getSPattern();
+
+        for (int i = 0; i < oPattern.length; i++) {
+            // Manually assemble O-O-P-S line by line
+            System.out.println(oPattern[i] + " " + oPattern[i] + " " + pPattern[i] + " " + sPattern[i]);
         }
     }
 }
